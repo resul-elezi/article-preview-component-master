@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
+
+:root {
+    --vdgb: hsl(217, 19%, 35%);
+    --ddb: hsl(214, 17%, 51%);
+    --gb: hsl(212, 23%, 69%);
+    --lgb: hsl(210, 46%, 95%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Manrope", sans-serif;
+    box-sizing: border-box;
+}
+html {
+    min-width: 375px;
+    max-width: 14400px;
+    margin: auto;
+    font-size: 13px;
+    font-weight: 500;
+}
+body {
+    width: 90%;
+    margin: auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--lgb);
+}
+.card {
+    margin-top: 3em;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+.cover img {
+    width: 100%;
+}
+.content-div {
+    padding: 2em 2em 1em 2em;
+}
+h1 {
+    font-size: 1.308rem;
+    font-weight: 700;
+    color: var(--vdgb);
+}
+p {
+    padding: 1em 0;
+    line-height: 1.5em;
+    color: var(--ddb);
+}
+.profile {
+    margin-top: 1em;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.profile-pic {
+    width: 35px;
+    border-radius: 50%;
+}
+span {
+    color: var(--ddb);
+    flex: 1;
+    margin-left: 1.5em;
+}
+strong {
+    color: var(--vdgb);
+}
+
+button {
+    padding: .6em;
+    background-color: var(--lgb);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+.attribution { 
+    margin-top: 3rem;
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+/* active state */
+
+.share {
+    background-color: var(--vdgb);
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 1.1rem 2rem;
+    border-radius: 0 0 10px 10px;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+.share p {
+    margin-right: 1em;
+    padding: 0;
+    color: var(--gb);
+    letter-spacing: .4em;
+    text-transform: uppercase;
+}
+.icons {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 1em;
+    flex: 1;
+}
+#share_btn {
+    background-color: var(--ddb);
+}
+#share_btn svg path {
+    fill: var(--lgb);
+}
+.active-state {
+    display: none;
+}
+@media screen and (min-width: 768px) {
+    .card {
+        display: grid;
+        grid-template-columns: 40% 60%;
+        margin-top: 0;
+        width: 730px;
+        height: 280px;
+        overflow: visible;
+    }
+    .cover img {
+        width: 285px;
+        height: 280px;
+        object-fit: cover;
+        object-position: left;
+        border-radius: 10px 0 0 10px;
+    }
+    .content-div {
+        padding: 3em;
+    }
+    h1 {
+        font-size: 1.538rem;
+    }
+    .profile {
+        margin-top: 0;
+    }
+    .share {
+        bottom: 7em;
+        right: -5.7em;
+        width: 248px;
+        border-radius: 10px;
+    }
+    #share_btn {
+        display: none;
+    }
+    .clicked {
+        background-color: var(--ddb);
+    }
+    .clicked svg path {
+        fill: var(--lgb);
+    }
+    .triangle {
+        display: flex;
+        width: 0;
+        height: 0;
+        border-left: 12px solid transparent;
+        border-right: 12px solid transparent;
+        border-top: 12px solid var(--vdgb);
+        position: absolute;
+        top: 3.7em;
+        left: 8.3em;
+    }
+    .icons {
+        margin-left: .5em;
+    }
+    .share p {
+        margin: 0 .5em;
+    }
+}
