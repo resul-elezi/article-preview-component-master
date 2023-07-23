@@ -117,10 +117,10 @@ button {
     gap: 1em;
     flex: 1;
 }
-#share_btn {
+#shareBtn2 {
     background-color: var(--ddb);
 }
-#share_btn svg path {
+#shareBtn2 svg path {
     fill: var(--lgb);
 }
 .active-state {
@@ -157,7 +157,7 @@ button {
         width: 248px;
         border-radius: 10px;
     }
-    #share_btn {
+    #shareBtn2 {
         display: none;
     }
     .clicked {

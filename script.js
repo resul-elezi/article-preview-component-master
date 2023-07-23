@@ -1,12 +1,12 @@
 'use strict';
 
-const shareBtn = document.getElementById('share-btn');
+const shareBtn = document.getElementById('shareBtn');
 
 const active = document.getElementById('active');
 
-const share_btn = document.getElementById('share_btn');
+const share_btn = document.getElementById('shareBtn2');
 
-const b_color = document.getElementById('share-btn');
+const b_color = document.getElementById('shareBtn');
 
 shareBtn.addEventListener('click', () => {
     active.classList.toggle('active-state');
